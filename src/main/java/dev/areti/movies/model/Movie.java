@@ -1,4 +1,4 @@
-package dev.areti.movies;
+package dev.areti.movies.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

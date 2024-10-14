@@ -1,5 +1,8 @@
-package dev.areti.movies;
+package dev.areti.movies.service;
 
+import dev.areti.movies.model.Movie;
+import dev.areti.movies.model.Review;
+import dev.areti.movies.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

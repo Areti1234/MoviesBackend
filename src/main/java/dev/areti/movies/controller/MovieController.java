@@ -1,6 +1,7 @@
-package dev.areti.movies;
+package dev.areti.movies.controller;
 
-import org.bson.types.ObjectId;
+import dev.areti.movies.model.Movie;
+import dev.areti.movies.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

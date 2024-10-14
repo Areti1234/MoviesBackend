@@ -1,6 +1,7 @@
-package dev.areti.movies;
+package dev.areti.movies.service;
 
-import org.bson.types.ObjectId;
+import dev.areti.movies.model.Movie;
+import dev.areti.movies.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
