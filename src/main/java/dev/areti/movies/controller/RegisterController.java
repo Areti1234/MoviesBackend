@@ -20,7 +20,7 @@ public class RegisterController {
 
         return registerService.createUser(register);
     }
-    @GetMapping("/{email}/{password}")
+    @GetMapping("/api/v1/{email}/{password}")
     public ResponseEntity<String> loginUser(@PathVariable String email, @PathVariable String password){
 
         return registerService.loginUser(email,password);
