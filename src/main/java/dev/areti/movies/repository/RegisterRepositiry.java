@@ -2,11 +2,11 @@ package dev.areti.movies.repository;
 
 
 import dev.areti.movies.model.Register;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface RegisterRepositiry extends MongoRepository<Register, Integer> {
-    public Register findByEmail(String email);
+public interface RegisterRepositiry extends MongoRepository<Register, ObjectId> {
+    Register findByEmail(String email);
 }
 
 //

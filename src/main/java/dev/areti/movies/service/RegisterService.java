@@ -15,11 +15,11 @@ public class RegisterService {
 
     public ResponseEntity<String> createUser(Register register) {
         try {
-            Register userExists = registerRepositiry.findByEmail(register.getEmail());
-            if (userExists == null) {
-                registerRepositiry.save(register);
+            if (registerRepositiry.findByEmail(register.getEmail()) != null) {
+            throw new RuntimeException("User already exists with email: " + register.getEmail());
+        }
                 return new ResponseEntity<>("Success: Admin Created Successfully with id:" + register.getId(), HttpStatus.CREATED);
-            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

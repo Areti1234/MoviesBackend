@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/v1/register")
+@RequestMapping("/api/v1")
 public class RegisterController {
     @Autowired
     private RegisterService registerService;
@@ -21,7 +21,7 @@ public class RegisterController {
 
         return registerService.createUser(register);
     }
-    @GetMapping("/api/v1/{email}/{password}")
+    @GetMapping("/{email}/{password}")
     public ResponseEntity<String> loginUser(@PathVariable String email, @PathVariable String password){
 
         return registerService.loginUser(email,password);
