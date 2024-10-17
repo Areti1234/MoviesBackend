@@ -10,11 +10,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/register")
 public class RegisterController {
     @Autowired
     private RegisterService registerService;
-    @PostMapping()
+    @PostMapping("/register")
     public ResponseEntity<String> createUser(@RequestBody Register register)
     {
 
@@ -26,3 +27,22 @@ public class RegisterController {
         return registerService.loginUser(email,password);
     }
 }
+
+
+//@RestController
+//
+//@RequestMapping("/api/v1/users")
+//public class UserController {
+//    @Autowired
+//    private UserService userService;
+//
+//    @PostMapping("/register")
+//    public ResponseEntity<User> registerUser(@RequestBody User user) {
+//        try {
+//            User savedUser = userService.registerUser(user);
+//            return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
+//        } catch (RuntimeException e) {
+//            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+//        }
+//    }
+//}

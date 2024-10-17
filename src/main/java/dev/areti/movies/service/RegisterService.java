@@ -48,3 +48,33 @@ public class RegisterService {
 
     }
 }
+
+//@Service
+//public class UserService {
+//    @Autowired
+//    private UserRepository userRepository;
+//
+//    // Register user logic (same as before)
+//    public User registerUser(User user) {
+//        if (userRepository.findByEmail(user.getEmail()) != null) {
+//            throw new RuntimeException("User already exists with email: " + user.getEmail());
+//        }
+//        return userRepository.save(user);
+//    }
+//
+//    // Login user logic
+//    public User loginUser(String email, String password) {
+//        // Check if user exists
+//        User user = userRepository.findByEmail(email);
+//        if (user == null) {
+//            throw new RuntimeException("User not found with email: " + email);
+//        }
+//
+//        // Validate password
+//        if (!user.getPassword().equals(password)) {
+//            throw new RuntimeException("Invalid credentials");
+//        }
+//
+//        return user;  // Return the user object on successful login
+//    }
+//}

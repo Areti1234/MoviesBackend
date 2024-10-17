@@ -5,16 +5,17 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "REGISTER")
+@Document(collection = "users")
 public class Register {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private ObjectId id;
     private String email;
     private String name;
     private String password;
